@@ -177,14 +177,30 @@ const Hero: React.FC = () => {
             </div>
           </div>
           
-          <div className="lg:col-span-2 flex items-center justify-center lg:justify-end animate-fade-in" style={{ animationDelay: '1.2s' }}>
+          {/* <div className="lg:col-span-2 flex items-center justify-center lg:justify-end animate-fade-in" style={{ animationDelay: '1.2s' }}>
             <div className="w-64 h-64 sm:w-80 sm:h-80 relative">
               {/* Circle image frame with enhanced gradient border */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-purple via-teal to-purple-dark animate-rotate opacity-70"></div>
+             {/* <div className="absolute inset-0 rounded-full bg-gradient-to-br from-purple via-teal to-purple-dark animate-rotate opacity-70"></div>
               <div className="absolute inset-[6px] rounded-full bg-dark"></div>
               <div className="absolute inset-[10px] rounded-full bg-dark-lighter overflow-hidden">
                 {/* Placeholder for profile image - replace with actual image */}
-                <div className="w-full h-full flex items-center justify-center text-center text-purple text-2xl font-bold">
+             {/*   <div className="w-full h-full flex items-center justify-center text-center text-purple text-2xl font-bold">
+                  <div className="bg-gradient-to-br from-purple to-teal animate-pulse bg-clip-text text-transparent">
+                    PSK
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> */}
+
+          <div className="col-span-2 lg:col-span-2 flex items-center justify-center lg:justify-end animate-fade-in" style={{ animationDelay: '1.2s' }}>
+            <div className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 relative">
+              {/* Circle image frame with enhanced gradient border */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-purple via-teal to-purple-dark animate-rotate opacity-70" />
+              <div className="absolute inset-1 sm:inset-[6px] rounded-full bg-dark" />
+              <div className="absolute inset-[3px] sm:inset-[10px] rounded-full bg-dark-lighter overflow-hidden">
+                {/* Placeholder for profile image - replace with actual image */}
+                <div className="w-full h-full flex items-center justify-center text-center text-purple text-xl sm:text-2xl font-bold">
                   <div className="bg-gradient-to-br from-purple to-teal animate-pulse bg-clip-text text-transparent">
                     PSK
                   </div>
