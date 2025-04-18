@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -122,18 +121,24 @@ export default {
 				pulse: {
 					'0%, 100%': { opacity: '1' },
 					'50%': { opacity: '0.5' }
+				},
+				glow: {
+					'0%': { boxShadow: '0 0 5px rgba(108, 99, 255, 0.5)' },
+					'50%': { boxShadow: '0 0 20px rgba(108, 99, 255, 0.8)' },
+					'100%': { boxShadow: '0 0 5px rgba(108, 99, 255, 0.5)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'float': 'float 3s ease-in-out infinite',
+				'float': 'float 4s ease-in-out infinite',
 				'fade-in': 'fadeIn 0.5s ease-out forwards',
 				'typing': 'typing 3.5s steps(40, end), blink .75s step-end infinite',
 				'shimmer': 'shimmer 1.5s infinite',
 				'rotate': 'rotate 8s linear infinite',
 				'wave': 'wave 2s linear infinite',
-				'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+				'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+				'glow': 'glow 2s ease-in-out infinite'
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

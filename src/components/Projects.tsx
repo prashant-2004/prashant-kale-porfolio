@@ -41,11 +41,15 @@ const Projects: React.FC<ProjectsProps> = ({ projectType }) => {
     <section 
       ref={sectionRef}
       id={projectType === 'software' ? 'projects' : 'ai-projects'} 
-      className="py-20 bg-dark-lighter"
+      className="py-20 bg-dark-lighter relative overflow-hidden"
     >
-      <div className="container mx-auto px-4">
+      {/* Animated background elements */}
+      <div className="absolute top-20 right-10 w-72 h-72 bg-purple/5 rounded-full blur-3xl animate-float"></div>
+      <div className="absolute bottom-20 left-10 w-72 h-72 bg-teal/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="opacity-0 animate-fade-in">
-          <h2 className="text-3xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             {projectType === 'software' ? 'Software Development Projects' : 'AI Engineering Projects'}
           </h2>
           <p className="text-white/70 max-w-2xl mb-12">
@@ -60,7 +64,10 @@ const Projects: React.FC<ProjectsProps> = ({ projectType }) => {
             <div
               key={index}
               ref={(el) => (projectRefs.current[index] = el)}
-              className="opacity-0"
+              className="opacity-0 transform hover:scale-[1.02] transition-all duration-300 ease-out"
+              style={{ 
+                animationDelay: `${0.2 * index}s`,
+              }}
             >
               <ProjectCard 
                 project={project}
